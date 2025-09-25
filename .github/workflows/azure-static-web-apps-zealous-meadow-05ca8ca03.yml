@@ -15,27 +15,35 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      # Klona repo
       - uses: actions/checkout@v3
 
+      # Lista alla filer för att kontrollera strukturen
+      - name: List files
+        run: ls -R
+
+      # Installera Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
 
+      # Installera dependencies
       - name: Install dependencies
         run: npm install
-        working-directory: ./react_portfolio_project
+        working-directory: react_portfolio_project
 
+      # Bygg appen
       - name: Build
         run: npm run build
-        working-directory: ./react_portfolio_project
+        working-directory: react_portfolio_project
 
-
+      # Deploy till Azure Static Web Apps
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_MEADOW_05CA8CA03 }}
           action: "upload"
           app_location: "react_portfolio_project"
-          output_location: "dist"
+          output_location: "react_portfolio_project/dist"
           skip_api_build: true
