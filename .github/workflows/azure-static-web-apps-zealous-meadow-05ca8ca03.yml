@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # eller 20.19+ för Vite
+          node-version: '22'
 
       - name: Install dependencies
         working-directory: react_portfolio_project
@@ -36,4 +36,5 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_MEADOW_05CA8CA03 }}
           action: "upload"
           app_location: "react_portfolio_project"
-          output_location: "react_portfolio_project/dist"
+          output_location: "dist"
+          skip_api_build: true
