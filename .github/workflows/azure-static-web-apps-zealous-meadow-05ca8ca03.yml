@@ -23,12 +23,13 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        working-directory: react_portfolio_project
         run: npm install
+        working-directory: ./react_portfolio_project
 
       - name: Build
-        working-directory: react_portfolio_project
         run: npm run build
+        working-directory: ./react_portfolio_project
+
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
