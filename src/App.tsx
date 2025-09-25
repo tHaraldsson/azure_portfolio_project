@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="portfolio">
-      {/* Navigation */}
+      
       <nav className="navbar">
         <div className="nav-brand">
           <h1>Min Portfolio</h1>
@@ -47,13 +47,13 @@ function App() {
         </ul>
       </nav>
 
-      {/* Main Content */}
+      
       <main className="main-content">
         {activeSection === 'home' && (
           <section className="hero">
             <div className="hero-content">
-              <h2>Hej, jag är [Ditt Namn]</h2>
-              <p>Frontend Developer & React Entusiast</p>
+              <h2>Hej, jag är Tommy</h2>
+              <p>Javautvecklare</p>
               <button 
                 className="cta-button"
                 onClick={() => setActiveSection('projects')}
@@ -71,6 +71,7 @@ function App() {
               <div className="skills">
                 <h3>Tekniska färdigheter</h3>
                 <ul>
+                  <li>Java</li>
                   <li>React</li>
                   <li>TypeScript</li>
                   <li>JavaScript</li>
@@ -81,8 +82,8 @@ function App() {
               <div className="bio">
                 <h3>Kort om mig</h3>
                 <p>
-                  Jag är en passionerad frontend-utvecklare med fokus på 
-                  att skapa moderna och användarvänliga webbapplikationer.
+                  Jag är en engagerad Javautvecklare med erfarenhet av att bygga robusta och skalbara backend-lösningar. Jag brinner för att designa effektiva system, skriva ren och underhållbar kod, samt implementera RESTful API:er och tjänster som löser verkliga problem. 
+                  Jag strävar alltid efter att hålla mig uppdaterad med moderna ramverk och best practices inom Java-ekosystemet.
                 </p>
               </div>
             </div>
@@ -103,21 +104,23 @@ function App() {
                 </div>
               </div>
               <div className="project-card">
-                <h3>Weather App</h3>
-                <p>En väderapplikation med realtidsdata</p>
+                <h3>Employee database</h3>
+                <p>En applikation som lagrar employees i en databas med ett fint GUI</p>
                 <div className="tech-tags">
-                  <span>React</span>
-                  <span>API</span>
-                  <span>CSS</span>
+                  <span>Java</span>
+                  <span>JDBC</span>
+                  <span>jFrame</span>
+                  <span>H2</span>
                 </div>
               </div>
               <div className="project-card">
-                <h3>Task Manager</h3>
-                <p>En enkel att-göra-lista app</p>
+                <h3>To-do webservice</h3>
+                <p>En enkel att-göra-lista webservice</p>
                 <div className="tech-tags">
-                  <span>JavaScript</span>
-                  <span>LocalStorage</span>
-                  <span>UI/UX</span>
+                  <span>Java</span>
+                  <span>Spring</span>
+                  <span>REST-API</span>
+                  <span>PostgreDB</span>
                 </div>
               </div>
             </div>
@@ -149,17 +152,17 @@ function App() {
               </button>
             </form>
             <div className="contact-info">
-              <p>📧 email@example.com</p>
-              <p>📱 +46 70 123 45 67</p>
+              <p>📧 tkoh93@live.com</p>
+              <p>📱 +46 79 072 72 34</p>
               <p>📍 Stockholm, Sverige</p>
             </div>
           </section>
         )}
       </main>
 
-      {/* Footer */}
+      
       <footer className="footer">
-        <p>&copy; 2024 Min Portfolio. Alla rättigheter förbehållna.</p>
+        <p>&copy; 2025 Min Portfolio. Alla rättigheter förbehållna.</p>
       </footer>
     </div>
   )
