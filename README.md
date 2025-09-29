@@ -68,8 +68,12 @@ screenshots/ – bilder för README
 Deployment på Azure
 Denna portfolio är deployad på Azure Static Web Apps.
 
+![Azure static web](./screenshots/staticweb.png)
+
 Så här fungerar det:
 När du pushar till master branch i GitHub, körs en GitHub Actions workflow automatiskt:
+
+![GitHub Actions](./screenshots/actions.png)
 
 Installerar dependencies (npm install)
 
@@ -85,8 +89,9 @@ npm run build
 ```
 Det skapar en produktionsversion i mappen dist som kan köras på valfri server.
 
-Live-länk
-https://zealous-meadow-05ca8ca03.2.azurestaticapps.net/
+## Live-länk
+
+Se portfolion live här: [Portfolio på Azure](https://zealous-meadow-05ca8ca03.2.azurestaticapps.net/)
 
 GitHub Actions / CI/CD
 Automatiserar bygg och deployment varje gång du pushar
