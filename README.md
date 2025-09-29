@@ -8,7 +8,7 @@ Syftet är att visa mina tekniska färdigheter, projekt och kontaktinformation p
 ## Teknologier
 
 - React 18 + TypeScript  
-- Vite (snabb build-tool)  
+- Vite  
 - CSS-moduler för styling  
 - Formulär för kontakt  
 - Responsiv design  
@@ -92,7 +92,4 @@ Det skapar en produktionsversion i mappen dist som kan köras på valfri server.
 ## Live-länk
 
 Se portfolion live här: [Portfolio på Azure](https://zealous-meadow-05ca8ca03.2.azurestaticapps.net/)
-
-GitHub Actions / CI/CD
-Automatiserar bygg och deployment varje gång du pushar
 
