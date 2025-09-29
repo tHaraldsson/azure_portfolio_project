@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# Min Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En personlig portfolio-hemsida byggd med **React**, **TypeScript** och **Vite**.  
+Syftet är att visa mina tekniska färdigheter, projekt och kontaktinformation på ett enkelt och stilrent sätt.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Teknologier
 
-## React Compiler
+- React 18 + TypeScript  
+- Vite (snabb build-tool)  
+- CSS-moduler för styling  
+- Formulär för kontakt  
+- Responsiv design  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Funktioner
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Navigeringsbar** för att hoppa mellan sektioner: Hem, Om mig, Projekt, Kontakt  
+- **Hem-sektion** med presentation och CTA-knapp  
+- **Om mig-sektion** med tekniska färdigheter och kort bio  
+- **Projekt-sektion** som listar tidigare projekt med teknologier  
+- **Kontakt-sektion** med formulär och kontaktinformation  
+- **Footer** med copyright-information  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Skärmdumpar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+![Startskärm](./screenshots/home.png)  
+![Om mig](./screenshots/about.png)  
+![Projekt](./screenshots/projects.png)  
+![Kontakt](./screenshots/contact.png)  
+
+
+---
+
+## Installation (lokalt)
+
+1. Klona repot:
+```bash
+git clone https://github.com/ditt-användarnamn/portfolio.git
+cd portfolio
+```
+2. Installera dependencies:
+```bash
+npm install
+```
+3. Starta utvecklingsserver:
+```bash
+npm run dev
+```
+4.Öppna webbläsaren på:
+```bash
+http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Filstruktur
+src/ – frontend (React-komponenter)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+App.tsx – huvudkomponenten med navigation och sektioner
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+App.css – styling
+
+screenshots/ – bilder för README
+
+Deployment på Azure
+Denna portfolio är deployad på Azure Static Web Apps.
+
+Så här fungerar det:
+När du pushar till master branch i GitHub, körs en GitHub Actions workflow automatiskt:
+
+Installerar dependencies (npm install)
+
+Bygger projektet (npm run build) → skapar produktionsfiler i dist
+
+Deployar dist till Azure Static Web App
+
+Du behöver alltså inte manuellt köra npm run build för deployment, workflow hanterar det.
+
+Om du vill testa lokalt innan deploy kan du köra:
+```bash
+npm run build
 ```
+Det skapar en produktionsversion i mappen dist som kan köras på valfri server.
+
+Live-länk
+https://zealous-meadow-05ca8ca03.2.azurestaticapps.net/
+
+GitHub Actions / CI/CD
+Automatiserar bygg och deployment varje gång du pushar
+
