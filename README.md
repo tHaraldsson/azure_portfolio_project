@@ -66,6 +66,7 @@ App.css – styling
 screenshots/ – bilder för README
 
 Deployment på Azure
+
 Denna portfolio är deployad på Azure Static Web Apps.
 
 ![Azure static web](./screenshots/staticweb.png)
